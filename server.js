@@ -1,6 +1,12 @@
 import express from "express";
+import cors from "cors";
 
 const app = express();
+
+// السماح بأي دومين للوصول (يمكن تضييقها لاحقًا)
+app.use(cors());
+
+// البقية كما هي
 app.use(express.json());
 
 app.get("/", (req, res) => {
